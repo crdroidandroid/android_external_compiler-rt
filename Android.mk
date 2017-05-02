@@ -15,6 +15,8 @@
 #
 #
 
+ifneq ($(DISABLE_DTC_OPTS),true)
+
 LOCAL_PATH := $(call my-dir)
 
 
@@ -484,4 +486,5 @@ include $(BUILD_HOST_SHARED_LIBRARY)
 # Build asan, lsan, etc.
 include $(call all-makefiles-under,$(LOCAL_PATH)/lib)
 
+endif
 endif
